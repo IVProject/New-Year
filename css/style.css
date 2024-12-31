@@ -1,0 +1,81 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#new-year-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1000;
+    background: transparent;
+}
+
+/* Timer */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+#countdown {
+    scale: 2;
+    font-family: 'Snowburst One', cursive;
+    font-size: 12rem;
+    letter-spacing: 0.6rem;
+    text-shadow: 0 0 10px #000;
+    
+}
+
+/* Background */
+.body-bg {
+    background: linear-gradient(#1c0531, #1d2129); 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.countdown-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#countdown {
+    color: #fff;
+    font-size: 5em;
+    text-shadow: 0 0 10px #000;
+}
+
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: 1;
+    animation: fall linear infinite;
+}
+
+
